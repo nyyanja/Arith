@@ -12,4 +12,5 @@ import java.lang.annotation.Target;
 @Documented
 @Retention(RUNTIME)
 @Target({TYPE, METHOD, CONSTRUCTOR})
-public @interface PojaGenerated {}
+public @interface PojaGenerated {
+}

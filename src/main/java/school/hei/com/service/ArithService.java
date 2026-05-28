@@ -11,18 +11,22 @@ public class ArithService {
             );
         }
     }
-    public double add(double a,double b){
-        validatePositiveNumbers(a,b);
+
+    public double add(double a, double b) {
+        validatePositiveNumbers(a, b);
         return a + b;
     }
+
     public double subtract(double a, double b) {
-        validatePositiveNumbers(a,b);
+        validatePositiveNumbers(a, b);
         return a - b;
     }
+
     public double multiply(double a, double b) {
         validatePositiveNumbers(a, b);
         return a * b;
     }
+
     public double divide(double a, double b) {
         validatePositiveNumbers(a, b);
         if (b == 0) {
