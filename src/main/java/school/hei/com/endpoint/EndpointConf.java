@@ -12,13 +12,13 @@ import school.hei.com.PojaGenerated;
 @PojaGenerated
 @Configuration
 public class EndpointConf {
-    @Bean
-    @Primary
-    public ObjectMapper objectMapper() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
-        objectMapper.configure(WRITE_DATES_AS_TIMESTAMPS, false);
-        objectMapper.findAndRegisterModules();
-        return objectMapper;
-    }
+  @Bean
+  @Primary
+  public ObjectMapper objectMapper() {
+    ObjectMapper objectMapper = new ObjectMapper();
+    objectMapper.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
+    objectMapper.configure(WRITE_DATES_AS_TIMESTAMPS, false);
+    objectMapper.findAndRegisterModules();
+    return objectMapper;
+  }
 }
