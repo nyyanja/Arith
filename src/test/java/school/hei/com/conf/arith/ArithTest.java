@@ -10,8 +10,7 @@ import school.hei.com.service.ArithService;
 @SpringBootTest
 class ArithTest {
 
-  @Autowired
-  private ArithService arithService;
+  @Autowired private ArithService arithService;
 
   @Test
   void should_add_two_positive_numbers() {
@@ -46,7 +45,7 @@ class ArithTest {
   @Test
   void should_throw_exception_when_first_number_is_negative() {
     Exception exception =
-            assertThrows(IllegalArgumentException.class, () -> arithService.add(-5, 3));
+        assertThrows(IllegalArgumentException.class, () -> arithService.add(-5, 3));
 
     assertEquals("Only positive numbers are allowed", exception.getMessage());
   }
@@ -54,7 +53,7 @@ class ArithTest {
   @Test
   void should_throw_exception_when_both_numbers_are_negative() {
     Exception exception =
-            assertThrows(IllegalArgumentException.class, () -> arithService.add(-5, -3));
+        assertThrows(IllegalArgumentException.class, () -> arithService.add(-5, -3));
 
     assertEquals("Only positive numbers are allowed", exception.getMessage());
   }
@@ -77,7 +76,7 @@ class ArithTest {
   @Test
   void should_throw_exception_when_subtracting_negative_numbers() {
     Exception exception =
-            assertThrows(IllegalArgumentException.class, () -> arithService.subtract(-10, 5));
+        assertThrows(IllegalArgumentException.class, () -> arithService.subtract(-10, 5));
 
     assertEquals("Only positive numbers are allowed", exception.getMessage());
   }
@@ -105,7 +104,7 @@ class ArithTest {
   @Test
   void should_throw_exception_when_multiplying_negative_numbers() {
     Exception exception =
-            assertThrows(IllegalArgumentException.class, () -> arithService.multiply(-2, 5));
+        assertThrows(IllegalArgumentException.class, () -> arithService.multiply(-2, 5));
 
     assertEquals("Only positive numbers are allowed", exception.getMessage());
   }
@@ -128,7 +127,7 @@ class ArithTest {
   @Test
   void should_throw_exception_when_dividing_by_zero() {
     Exception exception =
-            assertThrows(IllegalArgumentException.class, () -> arithService.divide(10, 0));
+        assertThrows(IllegalArgumentException.class, () -> arithService.divide(10, 0));
 
     assertEquals("Division by zero is not allowed", exception.getMessage());
   }
@@ -136,7 +135,7 @@ class ArithTest {
   @Test
   void should_throw_exception_when_dividing_negative_number() {
     Exception exception =
-            assertThrows(IllegalArgumentException.class, () -> arithService.divide(-10, 2));
+        assertThrows(IllegalArgumentException.class, () -> arithService.divide(-10, 2));
 
     assertEquals("Only positive numbers are allowed", exception.getMessage());
   }
